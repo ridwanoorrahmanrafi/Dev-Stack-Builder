@@ -4,7 +4,8 @@ A responsive React-based web application that allows users to explore different 
 
 ## Live Site
 
-**Live Link:** https://ridwanoorrahmanrafi.github.io/Dev-Stack-Builder/
+**Live Link (Netlify):** https://startling-cupcake-d35c4f.netlify.app/
+**Live Link (GitHub Pages):** https://ridwanoorrahmanrafi.github.io/Dev-Stack-Builder/
 
 ## GitHub Repository
 
