@@ -1,3 +1,5 @@
+import bannerStack from '../../assets/banner-stack.png';
+
 export default function Hero() {
     return (
         <section
@@ -46,7 +48,7 @@ export default function Hero() {
             <div className="hero-art">
 
                 <img
-                    src="/assets/banner-stack.png"
+                    src={bannerStack}
                     alt="Development technology stack illustration"
                 />
 
