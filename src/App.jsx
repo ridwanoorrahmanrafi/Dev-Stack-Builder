@@ -2,9 +2,11 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TechCard from './components/TechCard';
+import Stack from './components/Stack';
 
 export default function App() {
     const [technologies, setTechnologies] = useState([]);
+    const [stack, setStack] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -27,6 +29,13 @@ export default function App() {
 
         loadTechnologies();
     }, []);
+
+    const addToStack = (tech) => {
+        if (stack.some((item) => item.id === tech.id)) {
+            return;
+        }
+        setStack((previousStack) => [...previousStack, tech]);
+    };
 
     return (
         <>
@@ -56,13 +65,19 @@ export default function App() {
                                         <TechCard
                                             key={tech.id}
                                             tech={tech}
-                                            selected={false}
-                                            onAdd={() => {}}
+                                            selected={stack.some((item) => item.id === tech.id)}
+                                            onAdd={addToStack}
                                         />
                                     ))}
                                 </div>
                             )}
                         </div>
+
+                        <Stack
+                            items={stack}
+                            onRemove={() => {}}
+                            onRemoveAll={() => {}}
+                        />
                     </div>
                 </section>
             </main>
