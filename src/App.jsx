@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TechCard from './components/TechCard';
 import Stack from './components/Stack';
+import Footer from './components/Footer';
 
 export default function App() {
     const [technologies, setTechnologies] = useState([]);
@@ -35,6 +36,17 @@ export default function App() {
             return;
         }
         setStack((previousStack) => [...previousStack, tech]);
+    };
+
+    const removeFromStack = (tech) => {
+        setStack((previousStack) =>
+            previousStack.filter((item) => item.id !== tech.id)
+        );
+    };
+
+    const removeAll = () => {
+        if (stack.length === 0) return;
+        setStack([]);
     };
 
     return (
@@ -75,12 +87,13 @@ export default function App() {
 
                         <Stack
                             items={stack}
-                            onRemove={() => {}}
-                            onRemoveAll={() => {}}
+                            onRemove={removeFromStack}
+                            onRemoveAll={removeAll}
                         />
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     );
 }
