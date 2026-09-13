@@ -8,7 +8,7 @@ A responsive React-based web application that allows users to explore different 
 
 ## GitHub Repository
 
-**Repository Link:** `Add your GitHub repository link here`
+**Repository Link:** `[Add your GitHub repository link here](https://github.com/ridwanoorrahmanrafi/Dev-Stack-Builder)`
 
 ---
 
